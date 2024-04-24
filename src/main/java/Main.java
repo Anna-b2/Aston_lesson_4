@@ -17,15 +17,15 @@ public class Main
             case 4:
                 compareNumbers(); break;
             case 5:
-                sumNumbers(); break;
+                getSumNumbers(); break;
             case 6:
-                typeOfNumber(); break;
+                giveTypeOfNumber(); break;
             case 7:
-                NumberType(); break;
+                giveNumberType(); break;
             case 8:
-                NumberOfLines(); break;
+                giveNumberOfLines(); break;
             case 9:
-                TypeOfYear(); break;
+                getTypeOfYear(); break;
             case 10:
                 ChangeElements(); break;
             case 11:
@@ -33,9 +33,9 @@ public class Main
             case 12:
                 MultiplyElements(); break;
             case 13:
-                DiagonalElements(); break;
+                fillDiagonalElements(); break;
             case 14:
-                ArrayLength(); break;
+                fillArrayLength(); break;
         }
 
     }
@@ -66,7 +66,7 @@ public class Main
             System.out.println("a >= b");}
         else {System.out.println("a < b");}
     }
-    private static void  sumNumbers() {
+    private static void  getSumNumbers() {
         System.out.print("Введите первое число: ");
         Scanner in = new Scanner(System.in);
         int first = in.nextInt();
@@ -78,7 +78,7 @@ public class Main
             System.out.println("true");}
         else {System.out.println("false");}
     }
-    private static void  typeOfNumber() {
+    private static void  giveTypeOfNumber() {
         System.out.print("Введите число: ");
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
@@ -86,7 +86,7 @@ public class Main
             System.out.println("Число положительное");}
         else {System.out.println("Число отрицательное");}
     }
-    private static void  NumberType() {
+    private static void  giveNumberType() {
         System.out.print("Введите число: ");
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
@@ -94,7 +94,7 @@ public class Main
             System.out.println("true");}
         else {System.out.println("false");}
     }
-    private static void  NumberOfLines() {
+    private static void  giveNumberOfLines() {
         System.out.print("Введите строку: ");
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
@@ -105,11 +105,13 @@ public class Main
             System.out.println(string);
         }
     }
-    private static void  TypeOfYear() {
-        System.out.print("Введите число: ");
+    private static void  getTypeOfYear() {
+        System.out.print("Введите год: ");
         Scanner in = new Scanner(System.in);
-        int number = in.nextInt();
-        if (number < 0) {
+        int numberofyear = in.nextInt();
+        if (numberofyear < 0) {
+            System.out.println("Неверное значение");}
+        if (( numberofyear %400==0)||(numberofyear > 0 && numberofyear %4==0 && numberofyear %100!=0)) {
             System.out.println("true");}
         else {System.out.println("false");}
     }
@@ -139,7 +141,7 @@ public class Main
             System.out.print(numbers[i] + " ");
         }
     }
-    private static void  DiagonalElements() {
+    private static void  fillDiagonalElements() {
         System.out.print("Введите размер массива: ");
         Scanner in = new Scanner(System.in);
         int number = in.nextInt();
@@ -155,7 +157,7 @@ public class Main
             System.out.println();
         }
     }
-    private static void  ArrayLength() {
+    private static void  fillArrayLength() {
         System.out.print("Длина массива: ");
         int len, arr[];
         Scanner in = new Scanner(System.in);
