@@ -17,13 +17,13 @@ public class Main
             case 4:
                 compareNumbers(); break;
             case 5:
-                getSumNumbers(); break;
+                System.out.println(getSumNumbers(9,10)); break;
             case 6:
                 giveTypeOfNumber(); break;
             case 7:
-                giveNumberType(); break;
+                System.out.println(giveNumberType(9)); break;
             case 8:
-                giveNumberOfLines(); break;
+                giveNumberOfLines("Welcome", 4); break;
             case 9:
                 getTypeOfYear(); break;
             case 10:
@@ -35,7 +35,7 @@ public class Main
             case 13:
                 fillDiagonalElements(); break;
             case 14:
-                fillArrayLength(); break;
+                fillArrayLength(15,5); break;
         }
 
     }
@@ -66,17 +66,10 @@ public class Main
             System.out.println("a >= b");}
         else {System.out.println("a < b");}
     }
-    private static void  getSumNumbers() {
-        System.out.print("Введите первое число: ");
-        Scanner in = new Scanner(System.in);
-        int first = in.nextInt();
-        System.out.print("Введите второе число: ");
-        Scanner in1 = new Scanner(System.in);
-        int second = in1.nextInt();
+    private static boolean getSumNumbers(int first, int second) {
         int sum = first +second;
-        if (sum >= 10 && sum <=20) {
-            System.out.println("true");}
-        else {System.out.println("false");}
+        boolean value =(sum >= 10 && sum <=20);
+            return value;
     }
     private static void  giveTypeOfNumber() {
         System.out.print("Введите число: ");
@@ -86,21 +79,11 @@ public class Main
             System.out.println("Число положительное");}
         else {System.out.println("Число отрицательное");}
     }
-    private static void  giveNumberType() {
-        System.out.print("Введите число: ");
-        Scanner in = new Scanner(System.in);
-        int number = in.nextInt();
-        if (number < 0) {
-            System.out.println("true");}
-        else {System.out.println("false");}
+    private static boolean  giveNumberType(int number) {
+       boolean value =(number<0);
+       return value;
     }
-    private static void  giveNumberOfLines() {
-        System.out.print("Введите строку: ");
-        Scanner scanner = new Scanner(System.in);
-        String string = scanner.nextLine();
-        System.out.print("Введите количество строк: ");
-        Scanner in = new Scanner(System.in);
-        int number = in.nextInt();
+    private static void  giveNumberOfLines(String string, int number) {
         for (int i = 0; i < number; i++) {
             System.out.println(string);
         }
@@ -147,26 +130,19 @@ public class Main
         int number = in.nextInt();
         int [][] array = new int [number][number];
         for (int i = 0; i < number; i++) {
+             array[i][i] = 1;
             array[i][number - i - 1] = 1;
         }
         for (int i = 0; i < number; i++) {
             for (int j = 0; j < number; j++) {
-                array[i][i] = 1;
                 System.out.print(array[i][j] + " ");
             }
             System.out.println();
         }
     }
-    private static void  fillArrayLength() {
-        System.out.print("Длина массива: ");
-        int len, arr[];
-        Scanner in = new Scanner(System.in);
-        len = in.nextInt();
-        arr = new int[len];
-        System.out.print("Введите значение массива: ");
-        Scanner scanner = new Scanner(System.in);
-        int initialValue = scanner.nextInt();
-        for(int i = 0; i < len; i++){
+    private static void  fillArrayLength(int len, int initialValue) {
+        int[] array = new int[len];
+        for(int i = 0; i < array.length; i++){
             System.out.print(initialValue + " ");
 
         }
