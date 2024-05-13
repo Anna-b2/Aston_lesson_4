@@ -24,12 +24,13 @@ public class Main {
         Cat[] eating_cat = new Cat[2];
         eating_cat[0] = new Cat("Кошка", "Барсик", false);
         eating_cat[1] = new Cat("Кошка", "Вукан", false);
-        int plate = 45;
+        int plate = 1;
         for (Cat cat : eating_cat) {
-            System.out.println("Кот " + cat.cat_name + " покушал: " + cat.well_fed);
-            if (!cat.well_fed && plate >= 1) {
+    
+            if ( plate >= 1) {
                 cat.well_fed = true;
                 plate -= 1;
+                System.out.println("Кот " + cat.cat_name + " покушал: " + cat.well_fed);
             }
 
         }
