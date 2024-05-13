@@ -26,7 +26,7 @@ public class Main {
         eating_cat[1] = new Cat("Кошка", "Вукан", false);
         int plate = 45;
         for (Cat cat : eating_cat) {
-            System.out.println("Кот " + cat.cat_name + " сыт: " + cat.well_fed);
+            System.out.println("Кот " + cat.cat_name + " покушал: " + cat.well_fed);
             if (!cat.well_fed && plate >= 1) {
                 cat.well_fed = true;
                 plate -= 1;
