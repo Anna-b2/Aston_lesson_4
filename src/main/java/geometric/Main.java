@@ -1,11 +1,8 @@
 package PhoneBook;
-
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
         PhoneBook phoneBook1 = new PhoneBook();
-
         phoneBook1.add("Иванов", "292859037");
         phoneBook1.add("Иванов", "297867777");
         phoneBook1.add("Петров", "331212122");
@@ -19,13 +16,11 @@ public class Main {
         for (String number : numbers1) {
             System.out.println(number);
         }
-
         System.out.println();
         System.out.println("Номера телефонов для фамилии Петров:);
         for (String number : numbers2) {
             System.out.println(number);
         }
-
         System.out.println();
         System.out.println("Номера телефонов для фамилии Малышев:");
         for (String number : numbers3) {
