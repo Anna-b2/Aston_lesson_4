@@ -1,4 +1,4 @@
-package Lesson_8_PhoneBook;
+package PhoneBook;
 
 import java.util.*;
 
