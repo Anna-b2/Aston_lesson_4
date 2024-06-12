@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
+import org.junit.jupiter.api.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MTSTest {
